@@ -6,8 +6,11 @@
 ► Two Phase Commit
 
      It consists of single “coordinator” process and multiple “participant” processes: 
+     
      ➢ Coordinator - Exposes RPC interface to the clients and coordinates and dispatches operations to    the replicated servers.
+     
      ➢ Participants - Exposes RPC interface to the Coordinator and process multiple commands concurrently from coordinator.
+     
      ➢ Used SQLite for logging to keep durable state associated with the two-phase commit. 
      
 ► Client
